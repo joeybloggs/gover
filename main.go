@@ -13,9 +13,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/modocache/gover/gover"
 	"log"
 	"os"
+
+	"github.com/modocache/gover/gover"
 )
 
 const (
@@ -28,6 +29,9 @@ func defaultRoot() string {
 	if err != nil {
 		log.Fatal("gover: Could not get current working directory")
 	}
+
+	fmt.Println("Working DIR:", root)
+
 	return root
 }
 
